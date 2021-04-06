@@ -37,7 +37,7 @@
             position: absolute;
             transition: 0.5s all;
             justify-content: flex-start;
-            box-shadow: 0.5rem 0.5rem 0.5rem rgba($peach, $alpha: 0.3);
+            box-shadow: 0.5rem 0.5rem 0.5rem rgba($Black, $alpha: 0.3);
         }
     }
     &__item {
@@ -89,10 +89,6 @@
         // width: 85%;
         backdrop-filter: blur(5px);
         box-shadow: 0rem 0.5rem 1rem rgba($color: #000000, $alpha: 0.5);
-
-        // @include respond(tab-port) {
-        //     width: 95%;
-        // }
     }
 
     //js toggles

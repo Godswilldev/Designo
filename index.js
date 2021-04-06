@@ -1,3 +1,31 @@
+////////////////////////////////////////////////////////////////
+///inserting the html of the navigation through javascript
+//////////////////////////////////////////////////////////////
+const navigation = document.querySelector(".navigation");
+(function () {
+  const html = ` <nav class="nav">
+  <div class="nav__logo">
+    <img
+      src="assets/shared/desktop/logo-dark.png"
+      alt="nav logo"
+      class="nav__logo--img"
+    />
+  </div>
+  <ul class="nav__links">
+    <li><a href="#" class="nav__item">Our Company</a></li>
+    <li><a href="#" class="nav__item">Locations</a></li>
+    <li><a href="#" class="nav__item">Contact</a></li>
+  </ul>
+  <div class="nav__hamburger">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </div>
+</nav>`;
+
+  navigation.insertAdjacentHTML("beforeend", html);
+})();
+
 /////////////////////////////////////////////////////
 ///////////////////////// Button ripple effect
 ////////////////////////////////////////////////////
@@ -47,7 +75,6 @@ overlay.addEventListener("click", () => {
 /////////////////////////////////////////////////////
 ///sticky nav using the intersection observer api
 ////////////////////////////////////////////////////////
-const navigation = document.querySelector(".navigation");
 const navHeight = nav.getBoundingClientRect().height;
 const stickyNav = (entries) => {
   const [entry] = entries;

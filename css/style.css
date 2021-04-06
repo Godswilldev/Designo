@@ -148,7 +148,7 @@ body {
         position: absolute;
         transition: 0.5s all;
         justify-content: flex-start;
-        box-shadow: 0.5rem 0.5rem 0.5rem rgba(231, 129, 107, 0.3); } }
+        box-shadow: 0.5rem 0.5rem 0.5rem rgba(29, 28, 30, 0.3); } }
   .nav__item {
     text-decoration: none;
     color: #333136;
