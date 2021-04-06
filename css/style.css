@@ -1,3 +1,42 @@
+@charset "UTF-8";
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+/*
+
+    Our Company Locations Contact Award-winning custom designs and digital
+    branding solutions With over 10 years in the industry, we are experienced in
+    creating fully responsive websites, app design, and engaging brand
+    experiences. Find out more about our services. Learn more Web Design View
+    Projects App Design View Projects Graphic Design View Projects Passionate
+    Each project starts with an in-depth brand research to ensure we only create
+    products that serve a purpose. We merge art, design, and technology into
+    exciting new solutions. Resourceful Everything that we do has a strategic
+    purpose. We use an agile approach in all of our projects and value customer
+    collaboration. It guarantees superior results that fulfill our clients’
+    needs. Friendly We are a group of enthusiastic folks who know how to put
+    people first. Our success depends on our customers, and we strive to give
+    them the best experience a company can provide. Let’s talk about your
+    project Ready to take it to the next level? Contact us today and find out
+    how our expertise can help your business grow. Get in touch Our company
+    Locations Contact Designo Central Office 3886 Wellington Street Toronto,
+    Ontario M9C 3J5 Contact Us (Central Office) P : +1 253-863-8967 M :
+    contact@designo.co
+    */
 *,
 ::before,
 *::after {
@@ -7,3 +46,168 @@
 
 html {
   font-size: 62.5%; }
+
+body {
+  width: 85%;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      width: 100%; } }
+
+.heading {
+  font-family: "Jost", sans-serif; }
+  .heading__primary {
+    font-size: 4.8rem;
+    font-weight: 500; }
+  .heading__secondary {
+    font-size: 4rem;
+    font-weight: 500; }
+  .heading__tertiary {
+    font-size: 2rem;
+    font-weight: 400; }
+
+.paragraph,
+p,
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "Jost", sans-serif; }
+
+.btn {
+  border: 1px #e7816b solid;
+  overflow: hidden;
+  outline: none;
+  font-size: 2.5rem;
+  color: #ffffff;
+  background-color: #e7816b;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  margin: 1rem;
+  position: relative;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: 0.3s all;
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.3); }
+  .btn:focus {
+    box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.3); }
+  .btn:hover {
+    background-color: #ffad98;
+    color: #ffffff;
+    border: 1px solid #ffad98; }
+  .btn .circle {
+    position: absolute;
+    background-color: #ffffff;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-in-out; }
+  .btn__dark {
+    background-color: #ffffff;
+    color: #1d1c1e;
+    border: 1px solid #ffffff; }
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0; } }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+  background-color: #eddefc;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: relative;
+  z-index: 3; }
+  .nav__logo--img {
+    width: 20rem;
+    padding-left: 3rem; }
+  .nav__links {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    list-style: none; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__links {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-100rem);
+        width: 100%;
+        transition: 1s all;
+        flex-direction: column;
+        padding-top: 3rem;
+        height: 40rem;
+        background-color: #1d1c1e;
+        position: absolute;
+        transition: 0.5s all;
+        justify-content: flex-start;
+        box-shadow: 0.5rem 0.5rem 0.5rem rgba(231, 129, 107, 0.3); } }
+  .nav__item {
+    text-decoration: none;
+    color: #333136;
+    font-size: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__item {
+        color: aliceblue;
+        margin: 3rem;
+        font-size: 4rem;
+        text-transform: uppercase;
+        position: relative; } }
+  .nav__hamburger {
+    cursor: pointer;
+    display: none; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__hamburger {
+        display: block;
+        padding-right: 3rem; } }
+    .nav__hamburger .line {
+      transition: 0.5s all;
+      height: 0.3rem;
+      width: 4rem;
+      background-color: rebeccapurple;
+      position: relative;
+      z-index: 3;
+      display: block;
+      margin: 0.5rem; }
+      .nav__hamburger .line:nth-child(1) {
+        transform: translateY(3px); }
+      .nav__hamburger .line:nth-child(2) {
+        opacity: 0; }
+      .nav__hamburger .line:nth-child(3) {
+        transform: translateX(-10px); }
+  .nav.active .nav__hamburger .line:nth-child(1) {
+    transform: translateY(3px) rotate(45deg); }
+  .nav.active .nav__hamburger .line:nth-child(2) {
+    opacity: 0; }
+  .nav.active .nav__hamburger .line:nth-child(3) {
+    transform: translateY(-12px) rotate(-45deg); }
+  .nav.active .nav__links {
+    visibility: visible;
+    opacity: 1;
+    top: 10rem;
+    left: 10rem;
+    transform: translateX(-10rem); }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 2;
+  transition: all 0.5s;
+  display: block; }
+  .overlay.active {
+    display: none;
+    opacity: 0;
+    visibility: hidden; }
