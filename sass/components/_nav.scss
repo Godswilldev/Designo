@@ -13,8 +13,6 @@
         &--img {
             width: 20rem;
             padding-left: 3rem;
-            @include respond(tab-port) {
-            }
         }
     }
     &__links {
@@ -43,6 +41,8 @@
         text-decoration: none;
         color: $Dark-grey;
         font-size: 2rem;
+        margin-right: 3rem;
+        font-weight: 700;
         @include respond(tab-port) {
             color: aliceblue;
             margin: 3rem;
@@ -77,6 +77,16 @@
             &:nth-child(3) {
                 transform: translateX(-10px);
             }
+        }
+    }
+
+    &__sticky {
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 85%;
+        backdrop-filter: blur(5px);
+        @include respond(tab-port) {
+            width: 100%;
         }
     }
 
@@ -115,11 +125,13 @@
     backdrop-filter: blur(5px);
     z-index: 2;
     transition: all 0.5s;
-    display: block;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
 
     &.active {
-        display: none;
-        opacity: 0;
-        visibility: hidden;
+        display: block;
+        opacity: 1;
+        visibility: visible;
     }
 }

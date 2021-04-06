@@ -153,7 +153,9 @@ body {
   .nav__item {
     text-decoration: none;
     color: #333136;
-    font-size: 2rem; }
+    font-size: 2rem;
+    margin-right: 3rem;
+    font-weight: 700; }
     @media only screen and (max-width: 56.25em) {
       .nav__item {
         color: aliceblue;
@@ -183,6 +185,14 @@ body {
         opacity: 0; }
       .nav__hamburger .line:nth-child(3) {
         transform: translateX(-10px); }
+  .nav__sticky {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 85%;
+    backdrop-filter: blur(5px); }
+    @media only screen and (max-width: 56.25em) {
+      .nav__sticky {
+        width: 100%; } }
   .nav.active .nav__hamburger .line:nth-child(1) {
     transform: translateY(3px) rotate(45deg); }
   .nav.active .nav__hamburger .line:nth-child(2) {
@@ -206,8 +216,10 @@ body {
   backdrop-filter: blur(5px);
   z-index: 2;
   transition: all 0.5s;
-  display: block; }
+  display: none;
+  opacity: 0;
+  visibility: hidden; }
   .overlay.active {
-    display: none;
-    opacity: 0;
-    visibility: hidden; }
+    display: block;
+    opacity: 1;
+    visibility: visible; }

@@ -34,10 +34,38 @@ btns.forEach((btn) => {
 const nav = document.querySelector(".nav");
 const nav__hamburger = document.querySelector(".nav__hamburger");
 const overlay = document.querySelector(".overlay");
+const body = document.querySelector("body");
 nav__hamburger.addEventListener("click", () => {
   nav.classList.toggle("active");
   overlay.classList.toggle("active");
 });
-document.addEventListener("click", () => {
+overlay.addEventListener("click", () => {
   overlay.classList.remove("active");
+  nav.classList.remove("active");
 });
+
+/////////////////////////////////////////////////////
+///sticky nav using the intersection observer api
+////////////////////////////////////////////////////////
+const navigation = document.querySelector(".navigation");
+const navHeight = nav.getBoundingClientRect().height;
+const stickyNav = (entries) => {
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    nav.classList.add("nav__sticky");
+  } else {
+    nav.classList.remove("nav__sticky");
+  }
+};
+
+const navObserver = new IntersectionObserver(stickyNav, {
+  threshold: 0,
+  root: null,
+  rootMargin: `${navHeight + 50}px`,
+});
+
+navObserver.observe(navigation);
+
+//////////////////////////////////////////
+////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
