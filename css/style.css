@@ -48,13 +48,9 @@ html {
   font-size: 62.5%; }
 
 body {
-  width: 85%;
   max-width: 100%;
   margin: 0 auto;
   position: relative; }
-  @media only screen and (max-width: 56.25em) {
-    body {
-      width: 95%; } }
 
 .heading {
   font-family: "Jost", sans-serif; }
@@ -122,19 +118,23 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 10rem;
-  background-color: #eddefc;
-  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  background-color: white;
+  box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
   width: 100%;
   position: relative;
   z-index: 3; }
   .nav__logo--img {
     width: 20rem;
-    padding-left: 1.5rem; }
+    padding-left: 7rem; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__logo--img {
+        padding-left: 1rem; } }
   .nav__links {
     display: flex;
     width: 50%;
     justify-content: flex-end;
-    list-style: none; }
+    list-style: none;
+    padding-right: 3rem; }
     @media only screen and (max-width: 56.25em) {
       .nav__links {
         visibility: hidden;
@@ -169,7 +169,7 @@ body {
     @media only screen and (max-width: 56.25em) {
       .nav__hamburger {
         display: block;
-        padding-right: 1.5rem; } }
+        padding-right: 1rem; } }
     .nav__hamburger .line {
       transition: 0.5s all;
       height: 0.3rem;
@@ -188,11 +188,7 @@ body {
   .nav__sticky {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.7);
-    width: 85%;
     backdrop-filter: blur(5px); }
-    @media only screen and (max-width: 56.25em) {
-      .nav__sticky {
-        width: 100%; } }
   .nav.active .nav__hamburger .line:nth-child(1) {
     transform: translateY(3px) rotate(45deg); }
   .nav.active .nav__hamburger .line:nth-child(2) {

@@ -10,11 +10,11 @@ html {
     font-size: 62.5%;
 }
 body {
-    width: 85%;
+    // width: 85%;
     max-width: 100%;
     margin: 0 auto;
     position: relative;
-    @include respond(tab-port) {
-        width: 95%;
-    }
+    // @include respond(tab-port) {
+    //     width: 95%;
+    // }
 }
