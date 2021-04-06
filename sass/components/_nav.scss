@@ -12,7 +12,7 @@
     &__logo {
         &--img {
             width: 20rem;
-            padding-left: 3rem;
+            padding-left: 1.5rem;
         }
     }
     &__links {
@@ -42,7 +42,7 @@
         color: $Dark-grey;
         font-size: 2rem;
         margin-right: 3rem;
-        font-weight: 700;
+        font-weight: 500;
         @include respond(tab-port) {
             color: aliceblue;
             margin: 3rem;
@@ -57,7 +57,7 @@
         display: none;
         @include respond(tab-port) {
             display: block;
-            padding-right: 3rem;
+            padding-right: 1.5rem;
         }
         .line {
             transition: 0.5s all;

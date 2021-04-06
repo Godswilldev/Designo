@@ -54,7 +54,7 @@ body {
   position: relative; }
   @media only screen and (max-width: 56.25em) {
     body {
-      width: 100%; } }
+      width: 95%; } }
 
 .heading {
   font-family: "Jost", sans-serif; }
@@ -129,7 +129,7 @@ body {
   z-index: 3; }
   .nav__logo--img {
     width: 20rem;
-    padding-left: 3rem; }
+    padding-left: 1.5rem; }
   .nav__links {
     display: flex;
     width: 50%;
@@ -155,7 +155,7 @@ body {
     color: #333136;
     font-size: 2rem;
     margin-right: 3rem;
-    font-weight: 700; }
+    font-weight: 500; }
     @media only screen and (max-width: 56.25em) {
       .nav__item {
         color: aliceblue;
@@ -169,7 +169,7 @@ body {
     @media only screen and (max-width: 56.25em) {
       .nav__hamburger {
         display: block;
-        padding-right: 3rem; } }
+        padding-right: 1.5rem; } }
     .nav__hamburger .line {
       transition: 0.5s all;
       height: 0.3rem;
